@@ -5,6 +5,7 @@
 let m1 = document.querySelector('#m1')
 let m2 = document.querySelector('#m2')
 let m3 = document.querySelector('#m3')
+let myInput = document.querySelector('#myInput')
 
 
 m1.addEventListener('click', function() {
@@ -78,3 +79,39 @@ let func2 = (arr) => {
 }
 
 console.log(func2(data));
+
+
+
+
+
+
+
+// 5) Создайте поле ввода на странице. При нажатии на клавишу "Enter" должен выводиться текст, введенный в поле ввода
+
+
+myInput.addEventListener('keyup', event => {
+    if(event.key === 'Enter') {
+        alert(myInput.value)
+    }
+})
+
+
+
+
+
+// 6) Создайте две кнопки на странице. При нажатии на первую кнопку должен выводиться текст «Нажата первая кнопка» а при нажатии на вторую кнопку должен выводиться текст «Нажата вторая кнопка»
+
+let btn1 = document.querySelector('#btn1')
+let btn2 = document.querySelector('#btn2')
+
+btn1.addEventListener('click', event => {
+    alert("Нажата первая кнопка")
+})
+
+btn2.addEventListener('click', event => {
+    alert("Нажата вторая кнопка")
+})
+
+
+
+
