@@ -99,7 +99,8 @@ myInput.addEventListener('keyup', event => {
 
 
 
-// 6) Создайте две кнопки на странице. При нажатии на первую кнопку должен выводиться текст «Нажата первая кнопка» а при нажатии на вторую кнопку должен выводиться текст «Нажата вторая кнопка»
+// 6) Создайте две кнопки на странице. При нажатии на первую кнопку должен выводиться текст 
+// «Нажата первая кнопка» а при нажатии на вторую кнопку должен выводиться текст «Нажата вторая кнопка»
 
 let btn1 = document.querySelector('#btn1')
 let btn2 = document.querySelector('#btn2')
@@ -115,3 +116,20 @@ btn2.addEventListener('click', event => {
 
 
 
+
+// 7) Создайте 1 блок на странице. При наведении мыши на блок должен меняться их цвет
+//  на красный,синий интервал 3 сек
+
+let Block = document.querySelector('#Block')
+
+function changeBlockBg () {
+    setTimeout(() => {
+        Block.classList.toggle('changeBlock2')
+    }, 0)
+    setInterval(() => {
+        Block.classList.toggle('changeBlock3')
+    }, 3000)
+}
+
+
+Block.addEventListener('mouseover', changeBlockBg)
